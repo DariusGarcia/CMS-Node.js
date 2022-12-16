@@ -8,15 +8,15 @@ const questions = [
 		choices: [
 			{
 				name: 'View All Departments',
-				value: 'VIEW_DEPARTMENTS',
+				value: 'VIEW_ALL_DEPARTMENTS',
 			},
 			{
 				name: 'View All Roles',
-				value: 'VIEW_ROLES',
+				value: 'VIEW_ALL_ROLES',
 			},
 			{
 				name: 'View All Employees',
-				value: 'VIEW_EMPLOYEES',
+				value: 'VIEW_ALL_EMPLOYEES',
 			},
 			{
 				name: 'Add Department',
@@ -45,7 +45,21 @@ const questions = [
 
 function initPrompt() {
 	prompt(questions).then((selection) => {
-		console.log(selection.choice)
+		// depending on which option is selected, the corresponding function will be called
+		switch (selection.choice) {
+			case 'VIEW_ALL_DEPARTMENTS':
+				break
+			case 'VIEW_ALL_EMPLOYEES':
+				break
+			case 'ADD_DEPARTMENT':
+				break
+			case 'ADD_ROLL':
+				break
+			case 'ADD_EMPLOYEE':
+				break
+			case 'UPDATE_EMPLOYEE_ROLE':
+				break
+		}
 	})
 }
 
